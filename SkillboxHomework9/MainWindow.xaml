@@ -1,0 +1,41 @@
+﻿<Window x:Class="SkillboxHomework9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkillboxHomework9"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}"
+        Width="800" Height="508"
+        Title="Первое приложение WPF в стиле Material Design"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.6*"></ColumnDefinition>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox Foreground="LightSlateGray" Grid.Column="0" Grid.Row="0"  Name="tbSplit" Margin="10,10,10,10" TextWrapping="Wrap" Text="Введите предложение"  GotFocus="tb_GotFocus" LostFocus="tb_LostFocus" />
+        <TextBox Foreground="LightSlateGray" Grid.Column="0" Grid.Row="1"  Name="tbReverse"  Margin="10,10,10,10" TextWrapping="Wrap" Text="Введите предложение" GotFocus="tb_GotFocus" LostFocus="tb_LostFocus"/>
+
+        <Button Grid.Column="1" Grid.Row="0" Name="splitBtn" Content="Разделить"  Margin="10,10,10,10" Click="SplitBtnClick"/>
+        <Button Grid.Column="1" Grid.Row="1" Name="reverseBtn" Content="Обратить"  Margin="10,10,10,10" Click="ReverseBtnClick" IsCancel="True" />
+
+        <TextBlock Grid.Column="2" Grid.Row="1" Name="reverseResult"  Margin="10,10,10,10" TextWrapping="Wrap"/>
+        <ListBox Grid.Column="2" Grid.Row="0" Name="splitResult"  Margin="10,10,10,10" />
+
+    </Grid>
+</Window>
